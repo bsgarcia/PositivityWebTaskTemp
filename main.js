@@ -13,7 +13,7 @@ $(document).ready(function () {
     // because of range
     nCond--;
     var nCondPerSession = 3;
-    var nTrialsPerCondition = 20;
+    var nTrialsPerCondition = 3;
     var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
     var nTrialsPerConditionLot = 2;
 
