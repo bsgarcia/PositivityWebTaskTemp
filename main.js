@@ -301,8 +301,8 @@ $(document).ready(function () {
                     var Info = '<H3 align = "center">In each round you have to choose between one of two symbols displayed on either side of the screen.<br><br>'
                         + 'You can select one of the two symbols with a left-click.'
                         + 'After a choice, you can win or lose the following outcomes:<br><br>'
-                        + '0 point = 0,0 pence<br>1 point = 3 pence<br>2 points = 6 pence<br><br>'
-                        + 'Across the two phases of the cognitive experiment, you can win up to 1095 points = 5,475 pounds.<br><br></H3>';
+                        + '0 point = 0 pence<br>1 point = 3 pence<br>2 points = 6 pence<br><br>'
+                        + 'Across the two phases of the cognitive experiment, you can win up to 164 points = 4.92 pounds.<br><br></H3>';
                 } else if (language == 'fr') {
                     var Info = '<H3 align = "center">Après avoir fait votre choix, vous pouvez gagner les points suivants:<br><br>' +
                         '0 point = 0,0 centimes<br>1 point = 0,5 centimes<br>10 points = 5,0 centimes<br><br>' +
