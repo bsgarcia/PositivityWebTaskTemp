@@ -5,15 +5,15 @@ $(document).ready(function () {
     var language = "en";
     var compLink = 1;
     var nSessions = 3;
-    var nTrainingTrials = 2;//1;
-    var nTrialsLotteries = 1;
+    var nTrainingTrials = 8;//1;
+    var nTrialsLotteries = 18;
     var questionnaire = 1;
     var maxTrainingSessions = 2;
     var nCond = 9;
     // because of range
     nCond--;
     var nCondPerSession = 3;
-    var nTrialsPerCondition = 1;
+    var nTrialsPerCondition = 20;
     var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
     var nTrialsPerConditionLot = 2;
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
 
     var subID = expID;
 
-    var link = 'https://app.prolific.ac/submissions/complete?cc=YLRPP6EW';
+    var link = 'https://app.prolific.ac/';
 
     GetUserID();
 
@@ -283,11 +283,11 @@ $(document).ready(function () {
                 break;
 
             case 2:
-                if (language == 'en') {
-                    var Info = '<H3 align = "center">In the cognitive experiment, your final payoff will depend on your choices.<br><br>' +
-                        'You can maximize your payoff by finding out which option makes you win more points.<br><br>' +
-                        'For each choice you make, you will see the number of points you won.<br><br>' +
-                        'At the end of the experiment, we will calculate the cumulated sum of the points you won and translate the score into real money according to the following rule.<br><br> </H3>';
+                if (language === 'en') {
+                    var Info = '<H3 align = "center">In the cognitive experiment, your final payoff will depend on your choices.<br><br>'
+                        + 'The game is divided into 3 sessions, each of which will last approximately 8 minutes and include 60 rounds.<br><br>'
+                        + 'Before the first session there will be a short training session of about 32 rounds.<br><br>'
+                        + 'The word "ready" will be displayed before the game starts.<br><br>'
                 } else if (language == 'fr') {
                     var Info = '<H3 align = "center">Dans l\'expérience cognitive, votre indemnité finale dépendra de vos choix.<br><br>' +
                         'Vous pouvez maximiser vos gains en trouvant quelle option vous fera gagner le plus de points.<br><br>' +
@@ -298,9 +298,11 @@ $(document).ready(function () {
 
             case 3:
                 if (language == 'en') {
-                    var Info = '<H3 align = "center">After a choice, you can win the following outcomes:<br><br>' +
-                        '0 point = 0,0 pence<br>1 point = 0,5 pence<br>10 points = 5,0 pence<br><br>' +
-                        'Across the two phases of the cognitive experiment, you can win up to 1095 points = 5,475 pounds.<br><br></H3>';
+                    var Info = '<H3 align = "center">In each round you have to choose between one of two symbols displayed on either side of the screen.<br><br>'
+                        + 'You can select one of the two symbols with a left-click.'
+                        + 'After a choice, you can win or lose the following outcomes:<br><br>'
+                        + '0 point = 0,0 pence<br>1 point = 3 pence<br>2 points = 6 pence<br><br>'
+                        + 'Across the two phases of the cognitive experiment, you can win up to 1095 points = 5,475 pounds.<br><br></H3>';
                 } else if (language == 'fr') {
                     var Info = '<H3 align = "center">Après avoir fait votre choix, vous pouvez gagner les points suivants:<br><br>' +
                         '0 point = 0,0 centimes<br>1 point = 0,5 centimes<br>10 points = 5,0 centimes<br><br>' +
@@ -310,9 +312,11 @@ $(document).ready(function () {
 
             case 4:
                 if (language == 'en') {
-                    var Info = '<H3 align = "center">At each trial, you must choose between two abstract pictures by clicking on a picture.<br><br>' +
-                        'The crucial point is that, on average, one picture will give you more points than the other. The side (left/right) does not matter.<br><br>' +
-                        'You can maximize the final payoff by chosing at each trial the pictures with the highest average value.<br><br></H3>';
+                    var Info = '<H3 align = "center">The outcome of your choice will appear in the location of the symbol you chose.<br><br>'
+                        + 'The different symbols are most of the time not equal in terms of outcome: in most trials of the experiment<br><br>'
+                        + 'one is in average more advantageous (‘lucky’) compared to the other in terms of both points to be won, as well as points not to be lost.<br><br>'
+                        + 'Your task is to find out, by trial and error, which is the most advantageous stimulus and win as many points as possible,'
+                        + 'even if it’s not possible to win points on every round. '
                 } else if (language == 'fr') {
                     var Info = '<H3 align = "center">A chaque nouvel essai, vous devez choisir entre deux images abstraites en cliquant sur une image.<br><br>' +
                         'Retenez bien que, en moyenne, chaque image vous donnera plus de points que l\'autre. Le côté (gauche/droite) n\'a aucune importance.<br><br>' +
@@ -322,8 +326,11 @@ $(document).ready(function () {
 
             case 5:
                 if (language == 'en') {
-                    var Info = '<H3 align = "center">Let\'s begin with a training!<br><br>' +
-                        '(points won during the training do not count for the final payoff)<br><br></H3>';
+                    var Info = '<H3 align = "center">At the end of the experiment you will know the total amount of points you won.<br><br>'
+                        + 'The points won during the experiment will be translated into actual money, which will affect your final payment.<br><br>'
+                        + 'Since the total number of trials is fixed, your final payoff depends only your capacity to identify the advantageous stimuli and not on your rapidity.<br><br>'
+                        + 'Let\'s begin with a training!<br><br>'
+                        + '(points won during the training do not count for the final payoff)<br><br></H3>';
                 } else if (language == 'fr') {
                     var Info = '<H3 align = "center">Commençons avec un entrainement !<br><br>' +
                         '(les points gagnés durant l\'entraînement ne comptent pas pour le gain final)<br><br></H3>';
@@ -495,7 +502,7 @@ $(document).ready(function () {
             var Title = '<div id = "Title"><H2 align = "center"> <br><br><br><br></H2></div>';
         }
 
-        var Count = '<div id = "Count"><H3 align = "center">Your current amount: ' + parseInt(sumReward) / 1000 + ' points<br><br><br><br></H3><div>';
+        var Count = '<div id = "Count"><H3 align = "center">Your current amount: ' + parseInt(sumReward) + ' points<br><br><br><br></H3><div>';
 
         /* Create canevas for the slot machine effect, of the size of the images */
 
@@ -548,7 +555,7 @@ $(document).ready(function () {
 
             var key = getKeyCode(e);
 
-            if ((key == 101 && !InvertedPosition) || (key == 112 && InvertedPosition)) {
+            if ((key === 101 && !InvertedPosition) || (key === 112 && InvertedPosition)) {
                 if (clickDisabled)
                     return;
                 clickDisabled = true;
@@ -558,7 +565,7 @@ $(document).ready(function () {
                 document.getElementById("Option1").style.borderColor = "black";
                 targetElement.removeEventListener('keypress', myEventHandler);
 
-            } else if ((key == 112 && !InvertedPosition) || (key == 101 && InvertedPosition)) {
+            } else if ((key === 112 && !InvertedPosition) || (key === 101 && InvertedPosition)) {
 
                 if (clickDisabled)
                     return;
@@ -640,7 +647,7 @@ $(document).ready(function () {
                 correctChoice = +(ev2 > ev1);
             }
 
-            sumReward = sumReward + 1000 * ThisReward;
+            sumReward += ThisReward;
 
             var fb1 = document.getElementById("FB1");
             var fb2 = document.getElementById("FB2");
@@ -766,7 +773,7 @@ $(document).ready(function () {
                         cf_outcome: OtherReward,
                         choice_left_right: left_right,
                         reaction_time: Reaction_time - Choice_time,
-                        reward: parseInt(sumReward) / 1000,
+                        reward: sumReward,
                         correct_choice: correctChoice,
                         session: trainSess,
                         p1: P1,
@@ -852,7 +859,7 @@ $(document).ready(function () {
 
         var Info = '';
 
-        var toprint = parseInt(sumReward) / 1000;
+        var toprint = sumReward;
         var wonlost;
         if (language == 'en') {
             wonlost = ' you won ';
@@ -860,14 +867,14 @@ $(document).ready(function () {
                 wonlost = ' you lost ';
             }
 
-            Info += '<H3 align = "center">In this training,' + wonlost + toprint + ' points = ' + toprint / 2 + ' pence!</h3><br><br>';
+            Info += '<H3 align = "center">In this training,' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' pence!</h3><br><br>';
         } else if (language == 'fr') {
             wonlost = ' gagné ';
             if (toprint < 0) {
                 wonlost = ' perdu ';
             }
 
-            Info += '<H3 align = "center">Dans cet entrainement, vous avez' + wonlost + toprint + ' points = ' + toprint / 2 + ' centimes !</h3><br><br>';
+            Info += '<H3 align = "center">Dans cet entrainement, vous avez' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' centimes !</h3><br><br>';
         }
 
         sumReward = 0;
@@ -1077,7 +1084,7 @@ $(document).ready(function () {
             var Title = '<div id = "Title"><H2 align = "center"> <br><br><br><br></H2></div>';
         }
 
-        var Count = '<div id = "Count"><H3 align = "center">Your current amount: ' + parseInt(sumReward) / 1000 + ' points<br><br><br><br></H3><div>';
+        var Count = '<div id = "Count"><H3 align = "center">Your current amount: ' + parseInt(sumReward) + ' points<br><br><br><br></H3><div>';
 
         /* Create canevas for the slot machine effect, of the size of the images */
 
@@ -1202,7 +1209,7 @@ $(document).ready(function () {
                 correctChoice = +(ev2 > ev1);
             }
 
-            sumReward = sumReward + 1000 * ThisReward;
+            sumReward += ThisReward;
 
             var fb1 = document.getElementById("FB1");
             var fb2 = document.getElementById("FB2");
@@ -1336,7 +1343,7 @@ $(document).ready(function () {
                         cf_outcome: OtherReward,
                         choice_left_right: left_right,
                         reaction_time: Reaction_time - Choice_time,
-                        reward: parseInt(sumReward) / 1000,
+                        reward: sumReward,
                         session: SessionNum,
                         p1: P1,
                         p2: P2,
@@ -1423,7 +1430,7 @@ $(document).ready(function () {
 
         var Title = '<H2 align = "center">SESSION</H2>';
 
-        var toprint = parseInt(sumReward) / 1000;
+        var toprint = sumReward;
 
         var wonlost;
         var Info;
@@ -1434,7 +1441,7 @@ $(document).ready(function () {
             if (toprint < 0) {
                 wonlost = ' lost ';
             }
-            Info = '<H3 align = "center">So far, you have ' + wonlost + toprint + ' points = ' + toprint / 2 + ' pence!<br>Only 5 minutes of effort and you will be done !</h3><br><br>';
+            Info = '<H3 align = "center">So far, you have ' + wonlost + toprint + ' points = ' + toprint * 0.03  + ' pence!<br><br>';
             nextBut = '"Next"';
         } else if (language == 'fr') {
             wonlost = ' gagné ';
@@ -1442,7 +1449,7 @@ $(document).ready(function () {
                 wonlost = ' perdu ';
             }
 
-            Info = '<H3 align = "center">Jusqu\'ici vous avez' + wonlost + toprint + ' points = ' + toprint / 2 + ' centimes !<br>Encore 5 minutes d\'effort et vous aurez terminé !</h3><br><br>';
+            Info = '<H3 align = "center">Jusqu\'ici vous avez' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' centimes !<br>Encore 5 minutes d\'effort et vous aurez terminé !</h3><br><br>';
 
             nextBut = '"Suivant"';
         }
@@ -1469,7 +1476,7 @@ $(document).ready(function () {
     function StartLotteries(PageNum) { /*text to uncomment for information*/
 
         var NumPages = 2;
-        var toprint = parseInt(sumReward) / 1000;
+        var toprint = sumReward;
 
         CreateDiv('Stage', 'TextBoxDiv');
         console.log('Starting Lotteries');
@@ -1488,13 +1495,13 @@ $(document).ready(function () {
                     if (toprint < 0) {
                         wonlost = ' lost ';
                     }
-                    var Info = '<H3 align="center"><br>You finished the first phase of the cognitive experiment.<br> So far you have ' + wonlost + toprint + ' points = ' + toprint / 2 + ' pence!<br></h3><br><br>';
+                    var Info = '<H3 align="center"><br>You finished the first phase of the cognitive experiment.<br> So far you have ' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' pence!<br></h3><br><br>';
                 } else if (language == 'fr') {
                     wonlost = ' gagné ';
                     if (toprint < 0) {
                         wonlost = ' perdu ';
                     }
-                    var Info = '<H3 align="center"><br>Vous avez fini la première partie de l\'expérience cognitive.<br> Vous avez' + wonlost + toprint + ' points = ' + toprint / 2 + ' centimes !<br></h3><br><br>';
+                    var Info = '<H3 align="center"><br>Vous avez fini la première partie de l\'expérience cognitive.<br> Vous avez' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' centimes !<br></h3><br><br>';
                 }
                 break;
 
@@ -1641,7 +1648,7 @@ $(document).ready(function () {
             var Title = '<div id = "Title"><H2 align = "center"> <br><br><br><br></H2></div>';
         }
 
-        var Count = '<div id = "Count"><H3 align = "center">Your current amount: ' + parseInt(sumReward) / 1000 + ' points<br><br><br><br></H3><div>';
+        var Count = '<div id = "Count"><H3 align = "center">Your current amount: ' + parseInt(sumReward) + ' points<br><br><br><br></H3><div>';
 
         /* Create canevas for the slot machine effect, of the size of the images */
 
@@ -1658,20 +1665,27 @@ $(document).ready(function () {
         var M2L = conditions[Condition]['reward'][1][0];
 
         if (sum([P1L, P1W]) === 2) {
-            var textProb1 = M1W + ' = ' + P1W * 100 + '%';
+            var valW = ['winning', 'losing'][+(M1W < 0)];
+            var textProb1 = '<p style="font-size: 18px;"> <b>' + P1W * 100 + '%</b> chance of ' + valW + ' <b>' + M1W + '</b></p>';
         } else {
-            var textProb1 = M1W + ' = ' + P1W * 100 + '%' + '/' + M1L + ' = ' + P1L * 100 + '%';
+            var valW = ['winning', 'losing'][+(M1W < 0)];
+            var valL = ['winning', 'losing'][+(M1L < 0)];
+            var textProb1 = '<p style="font-size: 18px;"> <b>' + P1W * 100 + '%</b> chance of ' + valW + ' <b>' + M1W + '</b> <br>'
+                + '<b>' + P1L * 100 + '%</b> chance of ' + valL + ' <b>' + M1L + '</b> </p>';
         }
-
         if (sum([P2L, P2W]) === 2) {
-            var textProb2 = M2W + ' = ' + P2W * 100 + '%';
+            var valW = ['winning', 'losing'][+(M2W < 0)];
+            var textProb2 = '<p style="font-size: 18px;"> <b>' + P2W * 100 + '%</b> chance of ' + valW + ' <b>' + M2W + '</b></p>';
         } else {
-            var textProb2 = M2W + ' = ' + P2W * 100 + '%' + '/' + M2L + ' = ' + P2L * 100 + '%';
+            var valW = ['winning', 'losing'][+(M2W < 0)];
+            var valL = ['winning', 'losing'][+(M2L < 0)];
+            var textProb2 = '<p style="font-size: 18px;"> <b>' + P2W * 100 + '%</b> chance of ' + valW + ' <b>' + M2W + '</b> <br>'
+                + '<b>' + P2L * 100 + '%</b> chance of ' + valL + ' <b>' + M2L + '</b> </p>';
         }
 
-        var probabilityRow = '<div class="row" style="transform: translate(0%, -2500%);position:relative"><div class="col-xs-1 col-md-1"></div>' +
-            '<div class="col-xs3 col-md-3" style="text-align: center">' + textProb1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
-            '<div class="col-xs-3 col-md-3" style="text-align: center">' + textProb2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
+        var probabilityRow = '<div class="row" style="transform: translate(0%, -800%);position:relative;"><div class="col-xs-1 col-md-1"></div>' +
+            '<div class="col-xs3 col-md-3" style="text-align: center;">' + textProb1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
+            '<div class="col-xs-3 col-md-3" style="text-align: center;">' + textProb2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
         var Images = '<div id = "stimrow" class="row" style= "transform: translate(0%, -100%);position:relative"> <div class="col-xs-1 col-md-1"></div><div class="col-xs-3 col-md-3">' +
             Option1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + Option2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
@@ -1690,8 +1704,8 @@ $(document).ready(function () {
             var Feedback = '<div id = "fbrow" class="row" style= "transform: translate(0%, 0%);position:relative"> <div class="col-xs-1 col-md-1"></div>  <div class="col-xs-3 col-md-3">' + FB2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + FB1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
             var myCanvas = '<div id = "cvrow" class="row" style= "transform: translate(0%, -200%);position:relative">    <div class="col-xs-1 col-md-1"></div>  <div class="col-xs-3 col-md-3">' + canvas2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + canvas1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
-            var probabilityRow = '<div class="row" style="transform: translate(0%, -2500%);position:relative"><div class="col-xs-1 col-md-1"></div>' +
-            '<div class="col-xs3 col-md-3" style="text-align: center">' + textProb2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
+            var probabilityRow = '<div class="row" style="transform: translate(0%, -800%);position:relative;"><div class="col-xs-1 col-md-1"></div>' +
+            '<div class="col-xs3 col-md-3" style="text-align: center;">' + textProb2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
             '<div class="col-xs-3 col-md-3" style="text-align: center;">' + textProb1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
             var Symbols = [option2_image_idx, option1_image_idx];
@@ -1715,7 +1729,7 @@ $(document).ready(function () {
                 document.getElementById("Option1").style.borderColor = "black";
                 targetElement.removeEventListener('keypress', myEventHandler);
 
-            } else if ((key == 112 && !InvertedPosition) || (key == 101 && InvertedPosition)) {
+            } else if ((key === 112 && !InvertedPosition) || (key === 101 && InvertedPosition)) {
 
                 if (clickDisabled)
                     return;
@@ -1806,7 +1820,7 @@ $(document).ready(function () {
 
             console.log('CorrectChoice: ' + correctChoice);
 
-            sumReward = sumReward + 1000 * ThisReward;
+            sumReward += ThisReward;
 
             var fb1 = document.getElementById("FB1");
             var fb2 = document.getElementById("FB2");
@@ -1940,7 +1954,7 @@ $(document).ready(function () {
                         cf_outcome: OtherReward,
                         choice_left_right: left_right,
                         reaction_time: Reaction_time - Choice_time,
-                        reward: parseInt(sumReward) / 1000,
+                        reward: sumReward,
                         session: -2,
                         p1: P1,
                         p2: P2,
@@ -3822,7 +3836,7 @@ $(document).ready(function () {
 
         CreateDiv('Stage', 'TextBoxDiv');
 
-        var toprint = parseInt(totalReward) / 1000;
+        var toprint = totalReward;
 
         var wonlost;
         if (language == 'en') {
@@ -3839,7 +3853,7 @@ $(document).ready(function () {
 
         if (language == 'en') {
             var Title = '<h3 align = "center">The game is over!<br>' +
-                'You ' + wonlost + toprint + ' points in total, which is ' + toprint / 2 + ' pence.<br><br>Thank you for playing!<br><br>Please click the link to complete this study:<br></h3><br>';
+                'You ' + wonlost + toprint + ' points in total, which is ' + toprint * 0.03 + ' pence.<br><br>Thank you for playing!<br><br>Please click the link to complete this study:<br></h3><br>';
             var url = '';
             if (compLink)
                 url = '<center><a href="' + link + '">Click here.</a></center>';
@@ -3942,7 +3956,7 @@ $(document).ready(function () {
             .attr("id", ChildID);
         var container = document.getElementById(ParentID);
         d.appendTo(container);
-    };  /* function CreateDiv(ParentID, ChildID) */
+    }
 
     function shuffle(array) {
         let counter = array.length;
@@ -3962,7 +3976,7 @@ $(document).ready(function () {
         }
 
         return array;
-    };  /* function shuffle(array) */
+    }  /* function shuffle(array) */
 
     function shuffleByCond(array, ntrial) {
 
