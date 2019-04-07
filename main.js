@@ -202,7 +202,7 @@ $(document).ready(function () {
                 'https://sites.google.com/site/stefanopalminteri/publications<br>' +
                 '<H4>CONTACT AND ADDITIONAL INFORMATION</H4>' +
                 'Email: humanreinforcementlearning@gmail.com<br>' +
-                'This research has received a favorable opinion from the Inserm Ethical Review Committee / IRB00003888 on November 13th, 2018.<br>' +
+                'This research has received a favorable opinion from the Inserm Ethical Review Committee / IRB0888 on November 13th, 2018.<br>' +
                 'Your participation in this research confirms that you have read this information and wish to participate in the research study.<br><br>' +
                 '<H4>Please check all boxes before starting:<H4>';
 
@@ -230,7 +230,7 @@ $(document).ready(function () {
                 'https://sites.google.com/site/stefanopalminteri/publications<br>' +
                 '<H4>CONTACT ET INFORMATIONS SUPPLEMENTAIRES</H4>' +
                 'Email: humanreinforcementlearning@gmail.com<br>' +
-                'Cette recherche a reçu un avis favorable du comité d’évaluation éthique de l’Inserm/IRB00003888 le 13 novembre 2018.<br>' +
+                'Cette recherche a reçu un avis favorable du comité d’évaluation éthique de l’Inserm/IRB0888 le 13 novembre 2018.<br>' +
                 'Votre participation à cette recherche confirme que vous avez lu ces informations et acceptez de participer à cette étude.<br><br>' +
                 '<H4>Veuillez cocher toutes les cases avant de commencer :<H4>';
 
@@ -867,14 +867,14 @@ $(document).ready(function () {
                 wonlost = ' you lost ';
             }
 
-            Info += '<H3 align = "center">In this training,' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' pence!</h3><br><br>';
+            Info += '<H3 align = "center">In this training,' + wonlost + toprint + ' points = ' + toprint * 2  + ' pence!</h3><br><br>';
         } else if (language == 'fr') {
             wonlost = ' gagné ';
             if (toprint < 0) {
                 wonlost = ' perdu ';
             }
 
-            Info += '<H3 align = "center">Dans cet entrainement, vous avez' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' centimes !</h3><br><br>';
+            Info += '<H3 align = "center">Dans cet entrainement, vous avez' + wonlost + toprint + ' points = ' + toprint * 2  + ' centimes !</h3><br><br>';
         }
 
         sumReward = 0;
@@ -1441,7 +1441,7 @@ $(document).ready(function () {
             if (toprint < 0) {
                 wonlost = ' lost ';
             }
-            Info = '<H3 align = "center">So far, you have ' + wonlost + toprint + ' points = ' + toprint * 0.03  + ' pence!<br><br>';
+            Info = '<H3 align = "center">So far, you have ' + wonlost + toprint + ' points = ' + toprint * 2   + ' pence!<br><br>';
             nextBut = '"Next"';
         } else if (language == 'fr') {
             wonlost = ' gagné ';
@@ -1449,7 +1449,7 @@ $(document).ready(function () {
                 wonlost = ' perdu ';
             }
 
-            Info = '<H3 align = "center">Jusqu\'ici vous avez' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' centimes !<br>Encore 5 minutes d\'effort et vous aurez terminé !</h3><br><br>';
+            Info = '<H3 align = "center">Jusqu\'ici vous avez' + wonlost + toprint + ' points = ' + toprint *  + ' centimes !<br>Encore 5 minutes d\'effort et vous aurez terminé !</h3><br><br>';
 
             nextBut = '"Suivant"';
         }
@@ -1495,13 +1495,13 @@ $(document).ready(function () {
                     if (toprint < 0) {
                         wonlost = ' lost ';
                     }
-                    var Info = '<H3 align="center"><br>You finished the first phase of the cognitive experiment.<br> So far you have ' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' pence!<br></h3><br><br>';
+                    var Info = '<H3 align="center"><br>You finished the first phase of the cognitive experiment.<br> So far you have ' + wonlost + toprint + ' points = ' + toprint * 2 + ' pence!<br></h3><br><br>';
                 } else if (language == 'fr') {
                     wonlost = ' gagné ';
                     if (toprint < 0) {
                         wonlost = ' perdu ';
                     }
-                    var Info = '<H3 align="center"><br>Vous avez fini la première partie de l\'expérience cognitive.<br> Vous avez' + wonlost + toprint + ' points = ' + toprint * 0.03 + ' centimes !<br></h3><br><br>';
+                    var Info = '<H3 align="center"><br>Vous avez fini la première partie de l\'expérience cognitive.<br> Vous avez' + wonlost + toprint + ' points = ' + toprint *  + ' centimes !<br></h3><br><br>';
                 }
                 break;
 
@@ -3853,13 +3853,13 @@ $(document).ready(function () {
 
         if (language == 'en') {
             var Title = '<h3 align = "center">The game is over!<br>' +
-                'You ' + wonlost + toprint + ' points in total, which is ' + toprint * 0.03 + ' pence.<br><br>Thank you for playing!<br><br>Please click the link to complete this study:<br></h3><br>';
+                'You ' + wonlost + toprint + ' points in total, which is ' + toprint * 2  + ' pence.<br><br>Thank you for playing!<br><br>Please click the link to complete this study:<br></h3><br>';
             var url = '';
             if (compLink)
                 url = '<center><a href="' + link + '">Click here.</a></center>';
         } else if (language == 'fr') {
             var Title = '<h3 align = "center">L\'expérience est terminée !<br>' +
-                'Vous avez ' + wonlost + toprint + ' points au total, ce qui correspond à ' + toprint / 2 + ' centimes.<br><br>Merci de votre participation !<br><br>Cliquez sur ce lien pour compléter l\'étude :<br></h3><br>';
+                'Vous avez ' + wonlost + toprint + ' points au total, ce qui correspond à ' + toprint * 2 + ' centimes.<br><br>Merci de votre participation !<br><br>Cliquez sur ce lien pour compléter l\'étude :<br></h3><br>';
             var url = '';
             if (compLink)
                 url = '<center><a href="' + link + '">Cliquez ici.</a></center>';
