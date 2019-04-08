@@ -13,7 +13,7 @@ $(document).ready(function () {
     // because of range
     nCond--;
     var nCondPerSession = 3;
-    var nTrialsPerCondition = 3;
+    var nTrialsPerCondition = 1;
     var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
     var nTrialsPerConditionLot = 2;
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
         let idxReward = randint(
             0,
-            cond['punishment'].length - 1
+            cond['reward'].length - 1
         );
 
         // pop cond number
@@ -143,6 +143,20 @@ $(document).ready(function () {
         feedbackImg[fb].style.border = "5px solid " + borderColor;
         feedbackImg[fb].style.position = "relative";
         feedbackImg[fb].style.top = "0px";
+    }
+
+    /* On recupere les options disponibles */
+    var lotteriesImg = [];
+    for (let i = 1; i <= nImg/2; i++) {
+        for (let j = 1; j <= 2; j++) {
+            lotteriesImg[i + '_' + j] = new Image();
+            lotteriesImg[i + '_' + j].src = imgPath + 'lotteries/' + i + '_' + j + '.' + imgExt;
+            lotteriesImg[i + '_' + j].className = "img-responsive center-block";
+            lotteriesImg[i + '_' + j].style.border = "5px solid " + borderColor;
+            lotteriesImg[i + '_' + j].style.position = "relative";
+            lotteriesImg[i + '_' + j].style.top = "0px";
+        }
+
     }
 
     /*On les randomise*/
@@ -1622,14 +1636,11 @@ $(document).ready(function () {
         // console.log('n trial:'+ TrialNum);
         // console.log('n condition:'+ Condition);
 
-        var option1_image_idx = contexts[Condition][0];
-        var option2_image_idx = contexts[Condition][1];
-
-        var Option1 = images[option1_image_idx];
+        var Option1 = lotteriesImg[(Condition + 1) + '_' + 1];
         Option1.id = "Option1";
         Option1 = Option1.outerHTML;
 
-        var Option2 = images[option2_image_idx];
+        var Option2 = lotteriesImg[(Condition + 1) + '_' + 2];
         Option2.id = "Option2";
         Option2 = Option2.outerHTML;
 
@@ -1664,28 +1675,28 @@ $(document).ready(function () {
         var M2W = conditions[Condition]['reward'][1][1];
         var M2L = conditions[Condition]['reward'][1][0];
 
-        if (sum([P1L, P1W]) === 2) {
-            var valW = ['winning', 'losing'][+(M1W < 0)];
-            var textProb1 = '<p style="font-size: 18px;"> <b>' + P1W * 100 + '%</b> chance of ' + valW + ' <b>' + M1W + '</b></p>';
-        } else {
-            var valW = ['winning', 'losing'][+(M1W < 0)];
-            var valL = ['winning', 'losing'][+(M1L < 0)];
-            var textProb1 = '<p style="font-size: 18px;"> <b>' + P1W * 100 + '%</b> chance of ' + valW + ' <b>' + M1W + '</b> <br>'
-                + '<b>' + P1L * 100 + '%</b> chance of ' + valL + ' <b>' + M1L + '</b> </p>';
-        }
-        if (sum([P2L, P2W]) === 2) {
-            var valW = ['winning', 'losing'][+(M2W < 0)];
-            var textProb2 = '<p style="font-size: 18px;"> <b>' + P2W * 100 + '%</b> chance of ' + valW + ' <b>' + M2W + '</b></p>';
-        } else {
-            var valW = ['winning', 'losing'][+(M2W < 0)];
-            var valL = ['winning', 'losing'][+(M2L < 0)];
-            var textProb2 = '<p style="font-size: 18px;"> <b>' + P2W * 100 + '%</b> chance of ' + valW + ' <b>' + M2W + '</b> <br>'
-                + '<b>' + P2L * 100 + '%</b> chance of ' + valL + ' <b>' + M2L + '</b> </p>';
-        }
-
-        var probabilityRow = '<div class="row" style="transform: translate(0%, -800%);position:relative;"><div class="col-xs-1 col-md-1"></div>' +
-            '<div class="col-xs3 col-md-3" style="text-align: center;">' + textProb1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
-            '<div class="col-xs-3 col-md-3" style="text-align: center;">' + textProb2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
+        // if (sum([P1L, P1W]) === 2) {
+        //     var valW = ['winning', 'losing'][+(M1W < 0)];
+        //     var textProb1 = '<p style="font-size: 18px;"> <b>' + P1W * 100 + '%</b> chance of ' + valW + ' <b>' + M1W + '</b></p>';
+        // } else {
+        //     var valW = ['winning', 'losing'][+(M1W < 0)];
+        //     var valL = ['winning', 'losing'][+(M1L < 0)];
+        //     var textProb1 = '<p style="font-size: 18px;"> <b>' + P1W * 100 + '%</b> chance of ' + valW + ' <b>' + M1W + '</b> <br>'
+        //         + '<b>' + P1L * 100 + '%</b> chance of ' + valL + ' <b>' + M1L + '</b> </p>';
+        // }
+        // if (sum([P2L, P2W]) === 2) {
+        //     var valW = ['winning', 'losing'][+(M2W < 0)];
+        //     var textProb2 = '<p style="font-size: 18px;"> <b>' + P2W * 100 + '%</b> chance of ' + valW + ' <b>' + M2W + '</b></p>';
+        // } else {
+        //     var valW = ['winning', 'losing'][+(M2W < 0)];
+        //     var valL = ['winning', 'losing'][+(M2L < 0)];
+        //     var textProb2 = '<p style="font-size: 18px;"> <b>' + P2W * 100 + '%</b> chance of ' + valW + ' <b>' + M2W + '</b> <br>'
+        //         + '<b>' + P2L * 100 + '%</b> chance of ' + valL + ' <b>' + M2L + '</b> </p>';
+        // }
+        //
+        // var probabilityRow = '<div class="row" style="transform: translate(0%, -800%);position:relative;"><div class="col-xs-1 col-md-1"></div>' +
+        //     '<div class="col-xs3 col-md-3" style="text-align: center;">' + textProb1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
+        //     '<div class="col-xs-3 col-md-3" style="text-align: center;">' + textProb2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
         var Images = '<div id = "stimrow" class="row" style= "transform: translate(0%, -100%);position:relative"> <div class="col-xs-1 col-md-1"></div><div class="col-xs-3 col-md-3">' +
             Option1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + Option2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
@@ -1693,7 +1704,7 @@ $(document).ready(function () {
         var myCanvas = '<div id = "cvrow" class="row" style= "transform: translate(0%, -200%);position:relative">    <div class="col-xs-1 col-md-1"></div>  <div class="col-xs-3 col-md-3">' + canvas1 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + canvas2 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
         var InvertedPosition = +(Math.random() < 0.5);
-        var Symbols = [option1_image_idx, option2_image_idx];
+        var Symbols = [-1, -1];
 
         if (InvertedPosition) {
 
@@ -1704,14 +1715,14 @@ $(document).ready(function () {
             var Feedback = '<div id = "fbrow" class="row" style= "transform: translate(0%, 0%);position:relative"> <div class="col-xs-1 col-md-1"></div>  <div class="col-xs-3 col-md-3">' + FB2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + FB1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
             var myCanvas = '<div id = "cvrow" class="row" style= "transform: translate(0%, -200%);position:relative">    <div class="col-xs-1 col-md-1"></div>  <div class="col-xs-3 col-md-3">' + canvas2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div><div class="col-xs-3 col-md-3">' + canvas1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
-            var probabilityRow = '<div class="row" style="transform: translate(0%, -800%);position:relative;"><div class="col-xs-1 col-md-1"></div>' +
-            '<div class="col-xs3 col-md-3" style="text-align: center;">' + textProb2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
-            '<div class="col-xs-3 col-md-3" style="text-align: center;">' + textProb1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
+            // var probabilityRow = '<div class="row" style="transform: translate(0%, -800%);position:relative;"><div class="col-xs-1 col-md-1"></div>' +
+            // '<div class="col-xs3 col-md-3" style="text-align: center;">' + textProb2 + '</div><div id = "Middle" class="col-xs-4 col-md-4"></div>' +
+            // '<div class="col-xs-3 col-md-3" style="text-align: center;">' + textProb1 + '</div><div class="col-xs-1 col-md-1"></div></div>';
 
-            var Symbols = [option2_image_idx, option1_image_idx];
+            var Symbols = [-1, -1];
         }
 
-        $('#TextBoxDiv').html(Title + Feedback + Images + myCanvas + probabilityRow);
+        $('#TextBoxDiv').html(Title + Feedback + Images + myCanvas);
 
         var Choice_time = (new Date()).getTime();
 
@@ -1958,8 +1969,8 @@ $(document).ready(function () {
                         session: -2,
                         p1: P1,
                         p2: P2,
-                        option1: option1_image_idx,
-                        option2: option2_image_idx,
+                        option1: (Condition+1)*10+1,
+                        option2: (Condition+1)*10+2,
                         inverted: InvertedPosition,
                         choice_time: Choice_time - initTime
                     },
