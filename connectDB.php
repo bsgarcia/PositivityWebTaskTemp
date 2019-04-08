@@ -5,7 +5,7 @@
 $database="positivity";
 $host="localhost";
 $user="root";
-$password="basile3319";
+$password="Plij957fac&";
 
 $db = new mysqli($host, $user, $password, $database);
 
