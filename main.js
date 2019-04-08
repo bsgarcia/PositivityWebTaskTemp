@@ -1522,7 +1522,7 @@ $(document).ready(function () {
             case 2:
                 if (language == 'en') {
                     var Info = '<H3 align="center">You will now start the second phase of the task.<br><br>' +
-                        'Once again, you have to select of the two options by clicking on it.<br><br>' +
+                        'Once again, you have to select one of the two options by clicking on it.<br><br>' +
                         'The only difference is that instead of pictures, the percent chance of winning (or losing) 0, 1, 2, is now directly displayed.<br><br>' +
                         'Click when you are ready</h3>';
                 } else if (language == 'fr') {
