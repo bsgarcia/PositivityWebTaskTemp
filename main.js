@@ -5,7 +5,7 @@ $(document).ready(function () {
     var language = "en";
     var compLink = 1;
     var nSessions = 3;
-    var nTrainingTrials = 8;//1;
+    var nTrainingTrials = 1;//1;
     var nTrialsLotteries = 18;
     var questionnaire = 1;
     var maxTrainingSessions = 2;
@@ -13,7 +13,7 @@ $(document).ready(function () {
     // because of range
     nCond--;
     var nCondPerSession = 3;
-    var nTrialsPerCondition = 1;
+    var nTrialsPerCondition = 3;
     var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
     var nTrialsPerConditionLot = 2;
 
@@ -315,8 +315,8 @@ $(document).ready(function () {
                     var Info = '<H3 align = "center">In each round you have to choose between one of two symbols displayed on either side of the screen.<br><br>'
                         + 'You can select one of the two symbols with a left-click.'
                         + 'After a choice, you can win or lose the following outcomes:<br><br>'
-                        + '0 point = 0 pence<br>1 point = 3 pence<br>2 points = 6 pence<br><br>'
-                        + 'Across the two phases of the cognitive experiment, you can win up to 164 points = 4.92 pounds.<br><br></H3>';
+                        + '0 point = 0 pence<br>1 point = 3.3 pence<br>2 points = 6.6 pence<br><br>'
+                        + 'Across the two phases of the cognitive experiment, you can win up to 77 points = 2.54 pounds.<br><br></H3>';
                 } else if (language == 'fr') {
                     var Info = '<H3 align = "center">Après avoir fait votre choix, vous pouvez gagner les points suivants:<br><br>' +
                         '0 point = 0,0 centimes<br>1 point = 0,5 centimes<br>10 points = 5,0 centimes<br><br>' +
@@ -881,14 +881,14 @@ $(document).ready(function () {
                 wonlost = ' you lost ';
             }
 
-            Info += '<H3 align = "center">In this training,' + wonlost + toprint + ' points = ' + toprint * 2  + ' pence!</h3><br><br>';
+            Info += '<H3 align = "center">In this training,' + wonlost + toprint + ' points = ' + toprint * 3.3  + ' pence!</h3><br><br>';
         } else if (language == 'fr') {
             wonlost = ' gagné ';
             if (toprint < 0) {
                 wonlost = ' perdu ';
             }
 
-            Info += '<H3 align = "center">Dans cet entrainement, vous avez' + wonlost + toprint + ' points = ' + toprint * 2  + ' centimes !</h3><br><br>';
+            Info += '<H3 align = "center">Dans cet entrainement, vous avez' + wonlost + toprint + ' points = ' + toprint * 3.3  + ' centimes !</h3><br><br>';
         }
 
         sumReward = 0;
@@ -1455,7 +1455,7 @@ $(document).ready(function () {
             if (toprint < 0) {
                 wonlost = ' lost ';
             }
-            Info = '<H3 align = "center">So far, you have ' + wonlost + toprint + ' points = ' + toprint * 2   + ' pence!<br><br>';
+            Info = '<H3 align = "center">So far, you have ' + wonlost + toprint + ' points = ' + toprint * 3.3   + ' pence!<br><br>';
             nextBut = '"Next"';
         } else if (language == 'fr') {
             wonlost = ' gagné ';
@@ -1469,7 +1469,7 @@ $(document).ready(function () {
         }
 
         totalReward = totalReward + sumReward;
-        sumReward = 0;
+        //sumReward = 0;
 
         $('#TextBoxDiv').html(Info);
 
@@ -1509,22 +1509,21 @@ $(document).ready(function () {
                     if (toprint < 0) {
                         wonlost = ' lost ';
                     }
-                    var Info = '<H3 align="center"><br>You finished the first phase of the cognitive experiment.<br> So far you have ' + wonlost + toprint + ' points = ' + toprint * 2 + ' pence!<br></h3><br><br>';
+                    var Info = '<H3 align="center"><br>You finished the first phase of the cognitive experiment.<br> So far you have ' + wonlost + toprint + ' points = ' + toprint * 3.3 + ' pence!<br></h3><br><br>';
                 } else if (language == 'fr') {
                     wonlost = ' gagné ';
                     if (toprint < 0) {
                         wonlost = ' perdu ';
                     }
-                    var Info = '<H3 align="center"><br>Vous avez fini la première partie de l\'expérience cognitive.<br> Vous avez' + wonlost + toprint + ' points = ' + toprint *  + ' centimes !<br></h3><br><br>';
+                    var Info = '<H3 align="center"><br>Vous avez fini la première partie de l\'expérience cognitive.<br> Vous avez' + wonlost + toprint + ' points = ' + toprint * 3.3  + ' centimes !<br></h3><br><br>';
                 }
                 break;
 
             case 2:
                 if (language == 'en') {
                     var Info = '<H3 align="center">You will now start the second phase of the task.<br><br>' +
-                        'You will be choosing between pictures you have seen in the first phase of the experiment.<br><br>' +
-                        //'The pictures keep the same value as in the previous first phase, meaning that they give (on average) the same amount of points.<br><br>' +
-                        'The only difference is that the pictures are now presented with their respective probability of winning or losing.<br><br>' +
+                        'Once again, you have to select of the two options by clicking on it.<br><br>' +
+                        'The only difference is that instead of pictures, the percent chance of winning (or losing) 0, 1, 2, is now directly displayed.<br><br>' +
                         'Click when you are ready</h3>';
                 } else if (language == 'fr') {
                     var Info = '<H3 align="center">Vous allez maintenant commencer la deuxième partie de l\'expérience.<br><br>' +
@@ -2399,7 +2398,7 @@ $(document).ready(function () {
         });
 
         function SendQuestDataDB(call) {
-            clog = 'EXP: ' + expName + ' $ EXPID: ' + expID + ' $ ID: ' + subID + ' $ QUESTIONNAIRE: ' + questID + ' $ NUMBER: ' + 1 + ' $ ITEM: ' + itemNum + ' $ ANSWER: ' + answer + ' $ VAL:' + answer_value + ' $ RTIME: ' + (Reaction_time - Question_time);
+            //clog = 'EXP: ' + expName + ' $ EXPID: ' + expID + ' $ ID: ' + subID + ' $ QUESTIONNAIRE: ' + questID + ' $ NUMBER: ' + 1 + ' $ ITEM: ' + itemNum + ' $ ANSWER: ' + answer + ' $ VAL:' + answer_value + ' $ RTIME: ' + (Reaction_time - Question_time);
             /*console.log(clog)*/
 
             $.ajax({
@@ -2635,7 +2634,7 @@ $(document).ready(function () {
         });
 
         function SendQuestDataDB(call) {
-            clog = 'EXP: ' + expName + ' $ EXPID: ' + expID + ' $ ID: ' + subID + ' $ QUESTIONNAIRE: ' + questID + ' $ NUMBER: ' + 2 + ' $ ITEM: ' + itemNum + ' $ ANSWER: ' + answer + ' $ VAL:' + answer_value + ' $ RTIME: ' + (Reaction_time - Question_time);
+            // clog = 'EXP: ' + expName + ' $ EXPID: ' + expID + ' $ ID: ' + subID + ' $ QUESTIONNAIRE: ' + questID + ' $ NUMBER: ' + 2 + ' $ ITEM: ' + itemNum + ' $ ANSWER: ' + answer + ' $ VAL:' + answer_value + ' $ RTIME: ' + (Reaction_time - Question_time);
             /*console.log(clog)*/
 
             $.ajax({
@@ -3864,13 +3863,13 @@ $(document).ready(function () {
 
         if (language == 'en') {
             var Title = '<h3 align = "center">The game is over!<br>' +
-                'You ' + wonlost + toprint + ' points in total, which is ' + toprint * 2  + ' pence.<br><br>Thank you for playing!<br><br>Please click the link to complete this study:<br></h3><br>';
+                'You ' + wonlost + toprint + ' points in total, which is ' + toprint * 3.3  + ' pence.<br><br>Thank you for playing!<br><br>Please click the link to complete this study:<br></h3><br>';
             var url = '';
             if (compLink)
                 url = '<center><a href="' + link + '">Click here.</a></center>';
         } else if (language == 'fr') {
             var Title = '<h3 align = "center">L\'expérience est terminée !<br>' +
-                'Vous avez ' + wonlost + toprint + ' points au total, ce qui correspond à ' + toprint * 2 + ' centimes.<br><br>Merci de votre participation !<br><br>Cliquez sur ce lien pour compléter l\'étude :<br></h3><br>';
+                'Vous avez ' + wonlost + toprint + ' points au total, ce qui correspond à ' + toprint * 3.3 + ' centimes.<br><br>Merci de votre participation !<br><br>Cliquez sur ce lien pour compléter l\'étude :<br></h3><br>';
             var url = '';
             if (compLink)
                 url = '<center><a href="' + link + '">Cliquez ici.</a></center>';
