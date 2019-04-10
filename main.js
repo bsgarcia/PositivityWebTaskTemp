@@ -12,8 +12,8 @@ $(document).ready(function () {
     var nCond = 9;
     nCond--; //because of range function
     var nCondPerSession = 3;
-    var nTrialsPerconditionIdx = 1;
-    var nTrialsPerSession = nTrialsPerconditionIdx * ((nCond + 1) / nSessions);
+    var nTrialsPerCondition = 1;
+    var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
 
     var feedbackDuration = 2000;
     var sumReward = 0;
@@ -550,7 +550,7 @@ $(document).ready(function () {
                         correct_choice: correctChoice,
                         outcome: thisReward,
                         cf_outcome: otherReward,
-                        choice_leftRight: leftRight,
+                        choice_left_right: leftRight,
                         reaction_time: reactionTime - choiceTime,
                         reward: sumReward,
                         session: trainSess,
@@ -1098,7 +1098,7 @@ $(document).ready(function () {
                         correct_choice: correctChoice,
                         outcome: thisReward,
                         cf_outcome: otherReward,
-                        choice_leftRight: leftRight,
+                        choice_left_right: leftRight,
                         reaction_time: reactionTime - choiceTime,
                         reward: sumReward,
                         session: sessionNum,
@@ -1582,7 +1582,7 @@ $(document).ready(function () {
                         correct_choice: correctChoice,
                         outcome: thisReward,
                         cf_outcome: otherReward,
-                        choice_leftRight: leftRight,
+                        choice_left_right: leftRight,
                         reaction_time: reactionTime - choiceTime,
                         reward: sumReward,
                         session: 3,
