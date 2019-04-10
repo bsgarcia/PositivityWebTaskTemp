@@ -2427,7 +2427,7 @@ $(document).ready(function () {
             case 2:
                 var Info = '<H3 align = "center">In the cognitive experiment, your final payoff will depend on your choices.<br><br>'
                     + 'The game is divided into 3 sessions, each of which will last approximately 8 minutes and include 60 rounds.<br><br>'
-                    + 'Before the first session there will be a short training session of about 32 rounds.<br><br>'
+                    + 'Before the first session there will be a short training session of about 15 rounds.<br><br>'
                     + 'The word "ready" will be displayed before the game starts.<br><br>'
                 break;
 
