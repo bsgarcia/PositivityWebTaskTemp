@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee13ee03-398f-45ad-ac72-fc244a54d0c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertExpDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/InsertExpDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertLearningDataDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/InsertLearningDataDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/InsertLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertQuestionnaireDataDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/InsertQuestionnaireDataDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InsertSubDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/InsertSubDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connectDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cards_gif/lotteries/1_2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/cards_gif/lotteries/1_2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cards_gif/lotteries/2_2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/cards_gif/lotteries/2_2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cards_gif/lotteries/3_2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/cards_gif/lotteries/3_2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cards_gif/lotteries/7_2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/cards_gif/lotteries/7_2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cards_gif/lotteries/8_2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/cards_gif/lotteries/8_2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cards_gif/lotteries/9_2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/cards_gif/lotteries/9_2.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -14,40 +27,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.73775214">
+    <splitter split-orientation="horizontal" split-proportion="0.24895833">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="348">
-                  <caret line="1524" column="59" selection-start-line="1524" selection-start-column="59" selection-end-line="1524" selection-end-column="59" />
-                  <folding>
-                    <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state>
+                  <caret line="2644" selection-start-line="2644" selection-end-line="2644" />
                 </state>
               </provider>
             </entry>
@@ -67,7 +54,7 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/InsertExpDetails.php">
+            <entry file="file://$PROJECT_DIR$/php/InsertExpDetails.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="54">
                   <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
@@ -76,7 +63,7 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/InsertSubDetails.php">
+            <entry file="file://$PROJECT_DIR$/php/InsertSubDetails.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="18">
                   <caret line="1" selection-start-line="1" selection-end-line="1" />
@@ -84,11 +71,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/connectDB.php">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/php/connectDB.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
+                <state relative-caret-position="306">
+                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                 </state>
               </provider>
             </entry>
@@ -120,8 +107,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="349">
-                  <caret line="1817" column="2" selection-start-line="1817" selection-start-column="2" selection-end-line="1817" selection-end-column="2" />
+                <state relative-caret-position="612">
+                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
                   <folding>
                     <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
@@ -153,7 +140,7 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/InsertLearningDataDB.php">
+            <entry file="file://$PROJECT_DIR$/php/InsertLearningDataDB.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="486">
                   <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
@@ -168,7 +155,22 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>toprint*</find>
+      <find>Trial</find>
+      <find>InvertedPosition</find>
+      <find>Option2</find>
+      <find>Choice</find>
+      <find>Choice</find>
+      <find>Reward</find>
+      <find>Reward</find>
+      <find>Next()</find>
+      <find>End</find>
     </findStrings>
+    <replaceStrings>
+      <replace>invertedPosition</replace>
+      <replace>option2</replace>
+      <replace>pageNum</replace>
+      <replace>end</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -180,15 +182,16 @@
         <option value="$PROJECT_DIR$/RLTask_1pf2pf.js" />
         <option value="$PROJECT_DIR$/connectDB.php" />
         <option value="$PROJECT_DIR$/RLTask_1pf2nf.js" />
+        <option value="$PROJECT_DIR$/php/connectDB.php" />
         <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="262" />
-    <option name="width" value="1672" />
-    <option name="height" value="967" />
+    <option name="x" value="960" />
+    <option name="y" value="27" />
+    <option name="width" value="960" />
+    <option name="height" value="1173" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -206,18 +209,7 @@
             <path>
               <item name="html" type="b2602c69:ProjectViewProjectNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="html" type="b2602c69:ProjectViewProjectNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="cards_gif" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="html" type="b2602c69:ProjectViewProjectNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,6 +224,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/php" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -264,17 +261,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29698000" />
+    <option name="totallyTimeSpent" value="70565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1173" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.096354164" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.096354164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294539" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -282,7 +279,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3216783" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.04195804" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -293,14 +290,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/InsertLearningDataDB.php">
+    <entry file="file://$PROJECT_DIR$/php/InsertLearningDataDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InsertExpDetails.php">
+    <entry file="file://$PROJECT_DIR$/php/InsertExpDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
@@ -308,17 +305,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_1pf2pf.html" />
-    <entry file="file://$PROJECT_DIR$/connectDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InsertQuestionnaireDataDB.php">
+    <entry file="file://$PROJECT_DIR$/php/InsertQuestionnaireDataDB.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/InsertSubDetails.php">
+    <entry file="file://$PROJECT_DIR$/php/InsertSubDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
@@ -334,7 +324,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InsertLog.php">
+    <entry file="file://$PROJECT_DIR$/php/InsertLog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
@@ -358,10 +348,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/connectDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="1524" column="59" selection-start-line="1524" selection-start-column="59" selection-end-line="1524" selection-end-column="59" />
+        <state relative-caret-position="612">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#canvas#0;n#!!top" expanded="true" />
