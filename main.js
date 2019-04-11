@@ -12,7 +12,7 @@ $(document).ready(function () {
     var nCond = 9;
     nCond--; //because of range function
     var nCondPerSession = 3;
-    var nTrialsPerCondition = 20;
+    var nTrialsPerCondition = 1;
     var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
 
     var feedbackDuration = 2000;
@@ -21,14 +21,14 @@ $(document).ready(function () {
 
     // Training
     var nCondTraining = 3;
-    var nTrialTrainingPerCond = 5;
+    var nTrialTrainingPerCond = 1;
     var nTrainingTrials = nTrialTrainingPerCond * nCondTraining;//1;
     var maxTrainingSessions = 2;
     var nTrainingImg = nCondTraining * 2;
     nCondTraining--; // because of range function
 
     // Lotteries
-    var nTrialsPerConditionLot = 2;
+    var nTrialsPerConditionLot = 1;
     var nTrialsLotteries = (nCond + 1) * nTrialsPerConditionLot;
 
     var initTime = (new Date()).getTime();
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     var subID = expID;
 
-    var link = 'https://app.prolific.ac/';
+    var link = 'https://app.prolific.ac/submissions/complete?cc=W72FT5TV';
 
     // Manage compensations
     // -------------------------------------------------------------------------------------------------- //
