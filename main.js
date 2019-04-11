@@ -819,53 +819,53 @@ $(document).ready(function () {
 
         // Create canevas for the slot machine effect, of the size of the images
 
-        var canvas1 = '<canvas id="canvas1" name="best" height="620"' +
+        var canvas1 = '<canvas id="canvas1" height="620"' +
             ' width="620" class="img-responsive center-block"' +
             ' style="border: 5px solid transparent; position: relative; top: 0px;">';
 
-        var canvas2 = '<canvas id="canvas2" name="best" height="620"' +
+        var canvas2 = '<canvas id="canvas2" height="620"' +
             ' width="620" class="img-responsive center-block"' +
             ' style="border: 5px solid transparent; position: relative; top: 0px;">';
                /* Create canevas for the slot machine effect, of the size of the images */
 
-        var P1 = conditions[conditionIdx]['prob'][0][1];
-        var P2 = conditions[conditionIdx]['prob'][1][1];
-        var Mag1 = conditions[conditionIdx]['reward'][0];
-        var Mag2 = conditions[conditionIdx]['reward'][1];
-
-        p1 = conditions[conditionIdx]['prob'][0];
-        p2 = conditions[conditionIdx]['prob'][1];
-        r1 = conditions[conditionIdx]['reward'][0];
-        r2 = conditions[conditionIdx]['reward'][1];
-
-        if (sum(p1) === 2) {
-            var ev1 = p1[0] * r1[0];
-        } else {
-            var ev1 = p1.reduce(
-                function (r, a, i) {
-                    return r + a * r1[i]
-                }, 0);
-        }
-
-        if (sum(p2) === 2) {
-            var ev2 = p2[0] * r2[0];
-        } else {
-            var ev2 = p2.reduce(
-                function (r, a, i) {
-                    return r + a * r2[i]
-                }, 0);
-        }
-
-        if (ev1 > ev2) {
-            canvas2 = canvas2.replace('name="best"', '');
-        } else if (ev1 === ev2) {
-            if (Math.random() > 0.5)
-                canvas1 = canvas1.replace('name="best"', '');
-            else
-                canvas2 = canvas2.replace('name="best"', '');
-        } else {
-            canvas1 = canvas1.replace('name="best"', '');
-        }
+        // var P1 = conditions[conditionIdx]['prob'][0][1];
+        // var P2 = conditions[conditionIdx]['prob'][1][1];
+        // var Mag1 = conditions[conditionIdx]['reward'][0];
+        // var Mag2 = conditions[conditionIdx]['reward'][1];
+        //
+        // p1 = conditions[conditionIdx]['prob'][0];
+        // p2 = conditions[conditionIdx]['prob'][1];
+        // r1 = conditions[conditionIdx]['reward'][0];
+        // r2 = conditions[conditionIdx]['reward'][1];
+        //
+        // if (sum(p1) === 2) {
+        //     var ev1 = p1[0] * r1[0];
+        // } else {
+        //     var ev1 = p1.reduce(
+        //         function (r, a, i) {
+        //             return r + a * r1[i]
+        //         }, 0);
+        // }
+        //
+        // if (sum(p2) === 2) {
+        //     var ev2 = p2[0] * r2[0];
+        // } else {
+        //     var ev2 = p2.reduce(
+        //         function (r, a, i) {
+        //             return r + a * r2[i]
+        //         }, 0);
+        // }
+        //
+        // if (ev1 > ev2) {
+        //     canvas2 = canvas2.replace('name="best"', '');
+        // } else if (ev1 === ev2) {
+        //     if (Math.random() > 0.5)
+        //         canvas1 = canvas1.replace('name="best"', '');
+        //     else
+        //         canvas2 = canvas2.replace('name="best"', '');
+        // } else {
+        //     canvas1 = canvas1.replace('name="best"', '');
+        // }
 
         var Images = '<div id = "stimrow" class="row" style= "transform: translate(0%, -100%);position:relative"> ' +
             '<div class="col-xs-1 col-md-1"></div>  <div class="col-xs-3 col-md-3">'
