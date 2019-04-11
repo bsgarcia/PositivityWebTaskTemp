@@ -12,7 +12,7 @@ $(document).ready(function () {
     var nCond = 9;
     nCond--; //because of range function
     var nCondPerSession = 3;
-    var nTrialsPerCondition = 1;
+    var nTrialsPerCondition = 20;
     var nTrialsPerSession = nTrialsPerCondition * ((nCond + 1) / nSessions);
 
     var feedbackDuration = 2000;
@@ -21,15 +21,15 @@ $(document).ready(function () {
 
     // Training
     var nCondTraining = 3;
-    var nTrialTrainingPerCond = 1;
+    var nTrialTrainingPerCond = 5;
     var nTrainingTrials = nTrialTrainingPerCond * nCondTraining;//1;
     var maxTrainingSessions = 2;
     var nTrainingImg = nCondTraining * 2;
     nCondTraining--; // because of range function
 
     // Lotteries
-    var nTrialsPerconditionIdxLot = 1;
-    var nTrialsLotteries = (nCond + 1) * nTrialsPerconditionIdxLot;
+    var nTrialsPerConditionLot = 2;
+    var nTrialsLotteries = (nCond + 1) * nTrialsPerConditionLot;
 
     var initTime = (new Date()).getTime();
 
@@ -152,7 +152,7 @@ $(document).ready(function () {
     );
 
     var lotteriesCondition = shuffle(
-        Array(nTrialsPerconditionIdxLot).fill(range(0, nCond)).flat()
+        Array(nTrialsPerConditionLot).fill(range(0, nCond)).flat()
     );
 
     // Get stims, feedbacks, resources
@@ -2434,8 +2434,9 @@ $(document).ready(function () {
             case 3:
                 var Info = '<H3 align = "center">In each round you have to choose between one of two symbols displayed on either side of the screen.<br><br>'
                     + 'You can select one of the two symbols with a left-click.'
-                    + 'After a choice, you can win or lose the following outcomes:<br><br>'
-                    + '0 point = 0 pence<br>1 point = 7.5 pence<br>2 points = 15 pence<br><br>'
+                    + 'After a choice, you can win/lose the following outcomes:<br><br>'
+                    + '0 point = 0 pence<br>1 point = 7.5 pence<br>2 points = 15 pence<br><br'
+                    + '<br>-1 point = -7.5 pence<br>-2 points = -15 pence<br><br>'
                     + 'Across the two phases of the cognitive experiment, you can win up to 33 points = 2.47 pounds.<br><br></H3>';
                 break;
 
