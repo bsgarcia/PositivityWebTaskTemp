@@ -2435,8 +2435,8 @@ $(document).ready(function () {
                 var Info = '<H3 align = "center">In each round you have to choose between one of two symbols displayed on either side of the screen.<br><br>'
                     + 'You can select one of the two symbols with a left-click.'
                     + 'After a choice, you can win/lose the following outcomes:<br><br>'
-                    + '0 point = 0 pence<br>1 point = 7.5 pence<br>2 points = 15 pence<br><br'
-                    + '<br>-1 point = -7.5 pence<br>-2 points = -15 pence<br><br>'
+                    + '-1 point = -7.5 pence<br>-2 points = -15 pence<br>'
+                    + '0 point = 0 pence<br>1 point = 7.5 pence<br>2 points = 15 pence<br><br>'
                     + 'Across the two phases of the cognitive experiment, you can win up to 33 points = 2.47 pounds.<br><br></H3>';
                 break;
 
