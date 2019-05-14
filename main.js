@@ -702,93 +702,15 @@ $(document).ready(function () {
         });
     }
 
-    // function startSessions() {
-    //
-    //     var nPages = 2;/*number of pages*/
-    //
-    //     createDiv('Stage', 'TextBoxDiv');
-    //
-    //     var Title = '<H2 align = "center"></H2>';
-    //
-    //     var Info;
-    //     var instBut;
-    //     var trainBut;
-    //     var startBut;
-    //
-    //     var ready;
-    //     var steady;
-    //     var go;
-    //
-    //     Info = '<H3 align = "center">Now, you are about to start the game.<br>Click on start when you are ready.</h3><br><br>';
-    //
-    //     instBut = "Return to instructions";
-    //     trainBut = "play the practice again";
-    //     startBut = "Start the game";
-    //
-    //     ready = 'Ready';
-    //     steady = 'Steady';
-    //     go = 'Go!';
-    //
-    //     $('#TextBoxDiv').html(Title + Info);
-    //
-    //     var Buttons = '<div align="center">';
-    //     if (trainSess > -(maxTrainingSessions + 1)) {
-    //         Buttons += '<input align="center" type="button"  class="btn btn-default" id="Train" value=' + trainBut + ' >\n\ ';
-    //     }
-    //     Buttons += '<input align="center" type="button"  class="btn btn-default" id="Start" value=' + startBut + ' >';
-    //     Buttons += '</div>';
-    //
-    //     $('#Bottom').html(Buttons);
-    //
-    //     $('#Inst').click(function () {
-    //
-    //         $('#TextBoxDiv').remove();
-    //         $('#Stage').empty();
-    //         $('#Bottom').empty();
-    //         instructions(1);
-    //
-    //     });
-    //
-    //     $('#Train').click(function () {
-    //
-    //         $('#TextBoxDiv').remove();
-    //         $('#Stage').empty();
-    //         $('#Bottom').empty();
-    //         playTraining(0);
-    //
-    //     });
-    //
-    //     $('#Start').click(function () {
-    //
-    //         $('#TextBoxDiv').remove();
-    //         $('#Stage').empty();
-    //         $('#Bottom').empty();
-    //         setTimeout(function () {
-    //             $('#Stage').html('<H1 align = "center">' + ready + '</H1>');
-    //             setTimeout(function () {
-    //                 $('#Stage').html('<H1 align = "center">' + steady + '</H1>');
-    //                 setTimeout(function () {
-    //                     $('#Stage').html('<H1 align = "center">' + go + '</H1>');
-    //                     setTimeout(function () {
-    //                         $('#Stage').empty();
-    //                         playSessions(0, 0);
-    //                     }, 1000);
-    //                 }, 1000);
-    //             }, 1000);
-    //         }, 10);
-    //     });
-    // } /* function startSessions() */
-
     function playSessions(sessionNum, trialNum) {
 
         playOptions(sessionNum, trialNum);
-    } /* function playSessions(sessionNum) */
+    }
 
     function playOptions(sessionNum, trialNum) {
 
         if ($('#TextBoxDiv').length === 0) {
             createDiv('Stage', 'TextBoxDiv');
-            /*document.getElementById("TextBoxDiv").style.backgroundColor = "white";*/
         }
 
         /*Choisir une condition*/
